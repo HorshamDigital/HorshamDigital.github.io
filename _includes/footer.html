@@ -1,0 +1,34 @@
+<footer class="site-footer m-b-2">
+
+  <div class="wrapper">
+	<hr>
+    <div class="row m-t-1">
+      <div class="col-xs-12 col-sm-6 text-xs-left">
+        <ul class="contact-list">
+          <li>Get in touch <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>Copyright {{ site.title }} {{ site.time | date: '%Y' }}</li>
+		  
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 text-xs-right">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>

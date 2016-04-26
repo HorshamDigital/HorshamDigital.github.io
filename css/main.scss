@@ -1,0 +1,122 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$background-color: #fdfdfd;
+$brand-color:      #ef4e4e;
+
+$grey-color:       #828282;
+$text-color:       darken($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+// Backgrounds
+
+.grey-dark-bg{
+	background:$grey-color-dark;
+}
+// Header styling
+
+.site-header h1, header h2{
+	color:#fff;
+}
+.site-header h2{
+	font-weight:200;
+}
+.site-header .row{
+    background-image: url(/assets/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover !important;
+	background-color:#ef4e4e;
+}
+
+// Nav styling
+
+.site-header a.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link{
+	color:#fff;
+    padding: 0.3em;
+}
+.nav-link:visited, .nav-link:hover{
+	color:#fff;
+}
+
+// Content Styling
+
+.content-break {
+    display: block;
+    content: '';
+    width: 5rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: #d5d5d5;
+}
+
+.event-date{
+    font-size: 0.7em;
+    color: #EF5050;
+    float: right;
+}
+
+.icon-wrapper{
+	max-width:70px;
+	margin:auto;
+	display:inherit;
+}
+
+// Footer styling
+
+.site-footer ul {
+	list-style: none;
+	margin:0px;
+}
+.contact-list li:last-of-type {
+font-size: 0.8em;
+color: #9E9E9E;
+}
+
+// Flexbox fix
+
+.flex{
+	display:flex;
+}
+.justify-center{
+	justify-content:center;
+}
