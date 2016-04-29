@@ -89,10 +89,19 @@ $on-laptop:        800px;
     background-color: #d5d5d5;
 }
 
-.event-date{
-    font-size: 0.7em;
+.date{
+    font-size: 0.9em;
     color: #EF5050;
-    float: right;
+}
+.location{
+    font-size: 0.9em;
+    color: #9A9A9A;
+}
+#events-upcoming .row{
+  margin-bottom: 1em;
+}
+#events-upcoming p{
+  margin-bottom: 0.2em;
 }
 
 .icon-wrapper{
